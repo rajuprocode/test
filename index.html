@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Section</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1d2433;
+      --muted: #5b6475;
+      --accent: #4f46e5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .test-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 16px;
+      text-align: center;
+    }
+    .test-section .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .test-section h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 16px;
+    }
+    .test-section .lead {
+      max-width: 620px;
+      margin: 0 auto 48px;
+      color: var(--muted);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: left;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 48px;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <section class="test-section" id="test-section">
+    <span class="eyebrow">Test Section</span>
+    <h2>This is a test HTML section</h2>
+    <p class="lead">
+      A simple, responsive section with a heading, intro text, three feature
+      cards and a call-to-action button.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Fast</h3>
+        <p>Plain HTML and CSS with no dependencies, so it loads instantly.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>The card grid adapts from one column on phones to three on desktop.</p>
+      </div>
+      <div class="card">
+        <h3>Easy to edit</h3>
+        <p>Colors are defined as CSS variables at the top of the stylesheet.</p>
+      </div>
+    </div>
+
+    <a href="#test-section" class="btn">Get Started</a>
+  </section>
+</body>
+</html>
